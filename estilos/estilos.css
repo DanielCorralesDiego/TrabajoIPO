@@ -1,15 +1,21 @@
-
-
+header{
+    position: relative;
+    text-align: center;
+}
+header h1{
+    background-color: black;
+    position: relative;
+    color: white;
+}
 header img{
     width:100%;
+    background: fixed;
 }
 header nav ul{
-     /* posicionaremos el menú de manera absoluta respecto al header que 
-    contiene la imagen */
+     
     top: 20%;    
-    width: 100%; /* recuerda que un elemento posicionado de manera absoluta, ocupa solo el ancho
-    de su contenido. Para centrarlo debidamente en pantalla, necesitaremos un ancho 100% */
-    display: flex; /* lo necesitamos para centrar el menú  */
+    width: 100%;
+    display: flex; 
     justify-content: center;    
     background-color: #000000af;
     border-top: 2px solid #c1bebe;
@@ -19,7 +25,7 @@ header nav ul{
 nav ul li {
     padding: 1rem 1.5rem;
 }
-nav ul li a:hover { /* al pasar el ratón sobre elementos del menú cambian de color y tamaño*/
+nav ul li a:hover { 
     font-size: 2.7rem;
     color: #dfdb06;
 }
