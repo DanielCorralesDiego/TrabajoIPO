@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Arial';
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -45,11 +45,47 @@ img {
     display: block; /* Asegura que la imagen no tenga espacio extra debajo */
 }
 
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px; /* Añade espacio entre la imagen y el contenido de la derecha si es necesario */
+}
+
+/* Asegura que la imagen y el contenido a la derecha se mantengan en una línea y en tamaño apropiado */
+.header-content img, .header-content .right-content {
+    flex: 1;
+}
+
+/* Opcional: Si quieres que la imagen no crezca demasiado y el contenido a la derecha ocupe más espacio */
+.header-content img {
+    flex-basis: auto; /* ajusta este valor según sea necesario */
+    max-width: 50%; /* Ajusta este valor para el tamaño máximo de tu imagen */
+}
+
+.header-content .right-content {
+    flex-basis: 50%; /* Ajusta este valor para el ancho del contenido a la derecha */
+    text-align: left; /* Alinea el texto a la izquierda si es necesario */
+}
+
+/* Adapta el estilo de nav para trabajar con el nuevo layout */
+nav {
+    width: 100%; /* Asegura que nav ocupe todo el ancho disponible */
+    margin-top: 10px; /* Espacio arriba de nav */
+}
+
+/* Asegúrate de que el título sigue estando en su propia fila */
+header h1 {
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+
 main {
     padding: 20px;
 }
 
-.Beneficios h2, .Info h2 {
+h2 {
     color: #007bff;
     margin-bottom: 20px;
 }
@@ -61,8 +97,15 @@ main {
 
 .Beneficios p, .Info p {
     margin-bottom: 10px;
-    text-align: justify;
+    text-align: left;
+    max-width: 50%;
 }
+
+.Beneficios img, .Info img{
+    max-width: 50%;
+    justify-content: end;
+}
+
 
 footer {
     background: #333;
