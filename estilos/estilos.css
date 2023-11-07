@@ -1,31 +1,95 @@
-header{
-    position: relative;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #f8f8f8;
+    padding: 20px;
     text-align: center;
 }
-header h1{
-    background-color: black;
-    position: relative;
-    color: white;
+
+header nav {
+    margin-top: 10px;
 }
-header img{
-    width:100%;
-    background: fixed;
-}
-header nav ul{
-     
-    top: 20%;    
-    width: 100%;
-    display: flex; 
-    justify-content: center;    
-    background-color: #000000af;
-    border-top: 2px solid #c1bebe;
-    border-bottom: 2px solid #c1bebe;
+
+header ul {
     list-style: none;
+    display: inline-flex; /* Para mostrar los enlaces de la lista en línea */
+    gap: 15px; /* Espacio entre los elementos de la lista */
 }
-nav ul li {
-    padding: 1rem 1.5rem;
+
+header ul li {
+    padding: 5px;
 }
-nav ul li a:hover { 
-    font-size: 2.7rem;
-    color: #dfdb06;
+
+header a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Asegura que la imagen no tenga espacio extra debajo */
+}
+
+main {
+    padding: 20px;
+}
+
+.Beneficios h2, .Info h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.Beneficios h3 {
+    margin-top: 10px;
+    color: #333;
+}
+
+.Beneficios p, .Info p {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .flex-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header img {
+        width: 50%; /* Tamaño de imagen en pantallas más grandes */
+    }
+
+    header nav {
+        order: -1; /* Coloca la navegación antes del título en la vista flex */
+    }
+
+    header h1, header nav {
+        flex-basis: 100%; /* Permite que el título y la navegación ocupen todo el ancho en su propia fila */
+    }
 }
