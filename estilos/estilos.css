@@ -8,24 +8,30 @@
 body {
     font-family: 'Arial';
     line-height: 1.6;
-    margin: 0;
-    padding: 0;
+
+    background-color: black;
+    font-size: large;
+    
 }
 
 header {
+    position: fixed;
+    width: 100%;
     background: #f8f8f8;
-    padding: 20px;
+    padding: 10px;
     text-align: center;
+    margin-bottom: 0;
 }
 
 header nav {
-    margin-top: 10px;
+    margin-top:  0px;
+    margin-bottom: 0px;
 }
 
 header ul {
     list-style: none;
-    display: inline-flex; /* Para mostrar los enlaces de la lista en línea */
-    gap: 15px; /* Espacio entre los elementos de la lista */
+    display: inline-flex; 
+    gap: 15px; 
 }
 
 header ul li {
@@ -42,39 +48,16 @@ header a {
 img {
     max-width: 100%;
     height: auto;
-    display: block; /* Asegura que la imagen no tenga espacio extra debajo */
+    display: block;
+    
 }
 
-.header-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 20px; /* Añade espacio entre la imagen y el contenido de la derecha si es necesario */
-}
-
-/* Asegura que la imagen y el contenido a la derecha se mantengan en una línea y en tamaño apropiado */
-.header-content img, .header-content .right-content {
-    flex: 1;
-}
-
-/* Opcional: Si quieres que la imagen no crezca demasiado y el contenido a la derecha ocupe más espacio */
-.header-content img {
-    flex-basis: auto; /* ajusta este valor según sea necesario */
-    max-width: 50%; /* Ajusta este valor para el tamaño máximo de tu imagen */
-}
-
-.header-content .right-content {
-    flex-basis: 50%; /* Ajusta este valor para el ancho del contenido a la derecha */
-    text-align: left; /* Alinea el texto a la izquierda si es necesario */
-}
-
-/* Adapta el estilo de nav para trabajar con el nuevo layout */
 nav {
-    width: 100%; /* Asegura que nav ocupe todo el ancho disponible */
-    margin-top: 10px; /* Espacio arriba de nav */
+    width: 100%;
+    margin-top: 10px; 
 }
 
-/* Asegúrate de que el título sigue estando en su propia fila */
+
 header h1 {
     width: 100%;
     margin-bottom: 20px;
@@ -82,37 +65,48 @@ header h1 {
 
 
 main {
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-bottom: 465px;
     padding: 20px;
+    color: white;
 }
 
 h2 {
     color: #007bff;
     margin-bottom: 20px;
+    text-align: center;
 }
-
 .Beneficios h3 {
     margin-top: 10px;
-    color: #333;
+    color: #007bff;
+    text-align: center;
 }
 
 .Beneficios p, .Info p {
     margin-bottom: 10px;
     text-align: left;
-    max-width: 50%;
+
 }
 
-.Beneficios img, .Info img{
-    max-width: 50%;
+ .Info img{
+    float: right;
     justify-content: end;
 }
 
+.Info  button{
+    cursor: pointer;
+    font-size: large;
+    list-style: none;
+    border-radius: 4px;
+}
 
 footer {
     background: #333;
     color: #fff;
     text-align: center;
     padding: 10px;
-    position: relative;
+    position: ce;
     bottom: 0;
     width: 100%;
 }
@@ -124,15 +118,9 @@ footer {
         align-items: center;
     }
 
-    header img {
-        width: 50%; /* Tamaño de imagen en pantallas más grandes */
-    }
 
     header nav {
-        order: -1; /* Coloca la navegación antes del título en la vista flex */
+        order: -1; 
     }
 
-    header h1, header nav {
-        flex-basis: 100%; /* Permite que el título y la navegación ocupen todo el ancho en su propia fila */
-    }
 }
